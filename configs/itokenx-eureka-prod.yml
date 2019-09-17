@@ -1,0 +1,22 @@
+spring:
+  application:
+    name:itokenx-eureka
+  # 被zipkin追踪
+#  zipkin:
+#    base-url: http://localhost:9411
+#    # 被监控
+#  boot:
+#    admin:
+#      url: http://localhost:8084
+server:
+  port: 8761
+
+# eureka服务端配置
+eureka:
+  instance:
+    hostname:localhsot
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
