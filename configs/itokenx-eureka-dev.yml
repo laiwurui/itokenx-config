@@ -1,6 +1,6 @@
 spring:
   application:
-    name:itokenx-eureka
+    name: itokenx-eureka
   # 被zipkin追踪
   zipkin:
     base-url: http://localhost:9411
@@ -14,7 +14,7 @@ server:
 # eureka服务端配置
 eureka:
   instance:
-    hostname:localhsot
+    hostname: localhsot
   client:
     registerWithEureka: false
     fetchRegistry: false
