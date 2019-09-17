@@ -14,7 +14,7 @@ server:
 # eureka服务端配置
 eureka:
   instance:
-    hostname: localhsot
+    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
