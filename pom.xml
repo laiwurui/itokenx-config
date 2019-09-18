@@ -79,7 +79,6 @@
             </releases>
         </repository>
     </repositories>
-
     <build>
         <plugins>
             <plugin>
