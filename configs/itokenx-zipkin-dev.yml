@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: itokenx-zipkin
+  # 被监控
+  boot:
+    admin:
+      url: http://localhost:8084
+
+# 监控信息显示
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"]
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+server:
+  port: 9411
+# 注册到eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
