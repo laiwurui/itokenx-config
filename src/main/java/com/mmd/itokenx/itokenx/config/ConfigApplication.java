@@ -1,4 +1,4 @@
-package com.mmd.itokenx.config;
+package com.mmd.itokenx.itokenx.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

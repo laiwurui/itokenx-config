@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: itokenx-eureka
+  # 被zipkin追踪
+  zipkin:
+    base-url: http://localhost:9411
+    # 被监控
+  boot:
+    admin:
+      url: http://localhost:8084
+  datasource:
+    druid:
+      url: jdbc:mysql://localhsot:3306/itokenx?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      drive-class-name: com.mysql.jdbc.Driver
+
+
+server:
+  port: 9001
+
+mybatis:
+  type-aliases-package: com.mmd.itokenx.service.admin.domain
+  mapper-location: classpath:mapper/*.xml
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"]
+
+# eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
