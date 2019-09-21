@@ -1,2 +1,2 @@
 # itokenx-config
-clooud-config
+cloud-config
